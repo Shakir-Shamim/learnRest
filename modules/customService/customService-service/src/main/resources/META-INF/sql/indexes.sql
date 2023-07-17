@@ -1,0 +1,1 @@
+create index IX_B4180577 on EMPLOYEE_Emp (uuid_[$COLUMN_LENGTH:75$]);

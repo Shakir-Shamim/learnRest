@@ -1,0 +1,10 @@
+apiDir: "../customRest-api/src/main/java"
+apiPackagePath: "com.liferay.training"
+application:
+    baseURI: "/customRest"
+    className: "CustomRestApplication"
+    name: "CustomRest"
+author: "me"
+clientDir: "../customRest-client/src/main/java"
+testDir: "../customRest-test/src/testIntegration/java"
+generateBatch: true

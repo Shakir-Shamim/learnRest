@@ -1,0 +1,134 @@
+components:
+    schemas:
+        Emp:
+            description: An employee.
+            properties:
+                employeeId:
+                    description: The employee's identificator.
+                    type: string
+                name:
+                    description: The employee's name.
+                    type: string
+                description:
+                    description: The employee's description.
+                    type: string
+                mappingId:
+                    description: The employee's mappingId.
+                    type: string
+            type: object
+info:
+    description:
+        "CustomRest REST API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID
+        'com.liferay.training.client', and version '1.0.0'."
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "CustomRest"
+    version: v1.0
+openapi: 3.0.1
+paths:
+    "/emps":
+        get:
+            description: Get all emps
+            operationId: getApps
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Emp"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Emp"
+                                type: array
+                    description: default response
+            tags: ["Emp"]
+        post:
+            description: Adds a new emp
+            operationId: addApp
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Emp"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Emp"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                    description: default response
+            tags: ["Emp"]
+    /emps/{employeeId}:
+        delete:
+            description: Removes the emp
+            operationId: deleteApp
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                204:
+                    content:
+                        application/json: {}
+                        application/xml: {}
+            tags: ["Emp"]
+        get:
+            description: Retrieves the emp
+            operationId: getApp
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                    description: default response
+            tags: ["Emp"]
+        patch:
+            description: Updates the emp
+            operationId: updateApp
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Emp"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Emp"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Emp"
+                    description: "Emp successfully updated"
+            tags: ["Emp"]

@@ -1,0 +1,10 @@
+Bundle-Name: customService-api
+Bundle-SymbolicName: com.liferay.training.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.training.exception,\
+	com.liferay.training.model,\
+	com.liferay.training.service,\
+	com.liferay.training.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../customService-service/service.xml

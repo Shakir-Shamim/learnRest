@@ -1,0 +1,6 @@
+Bundle-Name: customRest-api
+Bundle-SymbolicName: com.liferay.training.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.training.dto.v1_0,\
+	com.liferay.training.resource.v1_0

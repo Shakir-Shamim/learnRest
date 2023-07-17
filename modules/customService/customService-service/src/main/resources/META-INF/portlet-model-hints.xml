@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.model.Emp">
+		<field name="uuid" type="String" />
+		<field name="employeeId" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="mappingId" type="String" />
+	</model>
+</model-hints>

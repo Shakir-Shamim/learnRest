@@ -1,0 +1,10 @@
+dependencies {
+	compile project(":modules:customRest:customRest-api")
+	compile project(":modules:customService:customService-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	restBuilder (group: "com.liferay", name: "com.liferay.portal.tools.rest.builder", version: "1.0.212") {force = true}
+}
+
+group = "com.liferay.training"
